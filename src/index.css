@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-base: #080808;
+  --color-titanium: #E2E2E2;
+  --color-glimmer: rgba(255, 255, 255, 0.03);
+
+  --radius-xl: 0.5rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 2rem;
+}
+
+@layer base {
+  body {
+    @apply bg-base text-titanium/80 antialiased font-sans selection:bg-white selection:text-black;
+    @apply selection:bg-titanium selection:text-base;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display italic font-light tracking-tight text-titanium;
+  }
+}
+
+@layer components {
+  .interactive-panel {
+    @apply bg-glimmer border border-white/5 backdrop-blur-3xl transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)];
+  }
+
+  .btn-magnetic {
+    @apply relative px-10 py-5 rounded-full border border-white/10 overflow-hidden transition-all duration-500 hover:border-white hover:text-white flex items-center justify-center gap-3;
+  }
+
+  .text-reveal {
+    @apply overflow-hidden block;
+  }
+
+  .noise-overlay {
+    mask-image: radial-gradient(circle, #fff 0%, transparent 100%);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+  }
+}
+
+.titanium-gradient {
+  background: linear-gradient(135deg, #FFF 0%, #AAA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+  animation: float 10s ease-in-out infinite;
+}
+
+.neural-bg {
+  background-image: 
+    radial-gradient(circle at 2px 2px, rgba(255,255,255,0.02) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-white/20 transition-all;
+}
