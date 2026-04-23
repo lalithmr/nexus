@@ -39,7 +39,7 @@ export default function Services() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <section id="services" className="py-40 bg-base relative overflow-hidden">
+    <section id="services" className="py-40 bg-base relative overflow-hidden neural-bg">
       <div className="max-w-7xl mx-auto px-12 lg:px-20">
         <div className="flex flex-col lg:flex-row justify-between items-end gap-10 mb-32">
           <div className="space-y-4">
@@ -51,7 +51,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="divide-y divide-white/5">
+        <div className="divide-y divide-titanium/10">
           {services.map((service, i) => (
             <motion.div
               key={i}
@@ -59,7 +59,12 @@ export default function Services() {
               onMouseLeave={() => setHovered(null)}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="group py-12 lg:py-20 flex flex-col lg:flex-row lg:items-center justify-between gap-10 cursor-pointer relative"
+              whileHover={{ 
+                scale: 1.01, 
+                backgroundColor: "rgba(89, 130, 145, 0.02)",
+                boxShadow: "0 25px 50px -12px rgba(89, 130, 145, 0.1)"
+              }}
+              className="group py-12 lg:py-20 flex flex-col lg:flex-row lg:items-center justify-between gap-10 cursor-pointer relative px-6 lg:px-10 -mx-6 lg:-mx-10 rounded-2xl transition-all duration-500"
             >
               <div className="flex items-center gap-10 lg:w-1/3">
                  <span className="font-mono text-[10px] opacity-20">0{i+1}</span>
@@ -71,12 +76,21 @@ export default function Services() {
                    {service.description}
                  </p>
                  <motion.div 
-                   animate={{ opacity: hovered === i ? 1 : 0, x: hovered === i ? 0 : -20 }}
-                   className="hidden lg:flex items-center gap-4 text-[10px] font-mono tracking-[0.4em] uppercase"
+                   animate={{ 
+                     opacity: hovered === i ? 1 : 0, 
+                     x: hovered === i ? 0 : -20,
+                     filter: hovered === i ? "blur(0px)" : "blur(4px)"
+                   }}
+                   className="flex items-center gap-6"
                  >
-                   Deploy /
-                   <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center">
-                      <ArrowRight className="w-4 h-4" />
+                   <button className="text-[10px] font-mono tracking-[0.4em] uppercase border border-titanium/20 px-6 py-3 rounded-full hover:bg-titanium hover:text-base transition-all duration-500 shadow-lg shadow-titanium/10">
+                     Learn More
+                   </button>
+                   <div className="hidden lg:flex items-center gap-4 text-[10px] font-mono tracking-[0.4em] uppercase text-titanium">
+                     Deploy /
+                     <div className="w-10 h-10 rounded-full border border-titanium/20 flex items-center justify-center bg-base group-hover:border-titanium transition-colors">
+                        <ArrowRight className="w-4 h-4" />
+                     </div>
                    </div>
                  </motion.div>
               </div>

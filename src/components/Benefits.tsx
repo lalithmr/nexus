@@ -12,7 +12,7 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section id="results" className="py-40 bg-base border-t border-white/5">
+    <section id="results" className="py-40 bg-base border-t border-titanium/10">
       <div className="max-w-7xl mx-auto px-12 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-32">
         <div className="space-y-40">
           <div className="space-y-8">
@@ -26,7 +26,7 @@ export default function Benefits() {
                 key={i}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                className="flex flex-col gap-6 border-b border-white/5 pb-16"
+                className="flex flex-col gap-6 border-b border-titanium/10 pb-16"
               >
                  <span className="text-[10px] font-mono tracking-[0.4em] uppercase opacity-20">{benefit.label}</span>
                  <div className="text-7xl lg:text-9xl font-light titanium-gradient">{benefit.value}</div>
@@ -47,7 +47,7 @@ export default function Benefits() {
                   </p>
                   <div className="flex flex-col gap-2 uppercase tracking-widest text-[10px] font-mono">
                      <span className="text-titanium">Director of Global Ops</span>
-                     <span className="text-white/10">Project: Zenith_Protocol</span>
+                     <span className="text-titanium/20">Project: Zenith_Protocol</span>
                   </div>
               </motion.div>
 
@@ -61,7 +61,7 @@ export default function Benefits() {
                   </p>
                   <div className="flex flex-col gap-2 uppercase tracking-widest text-[10px] font-mono">
                      <span className="text-titanium">Chief Strategy Officer</span>
-                     <span className="text-white/10">Project: Aether_Ops</span>
+                     <span className="text-titanium/20">Project: Aether_Ops</span>
                   </div>
               </motion.div>
            </div>

@@ -30,7 +30,7 @@ export default function CTA() {
              className="btn-magnetic group"
            >
              Initiate Priority Contact
-             <div className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center group-hover:scale-110 transition-transform">
+             <div className="w-10 h-10 rounded-full bg-titanium text-base flex items-center justify-center group-hover:scale-110 transition-transform">
                 <ArrowRight className="w-4 h-4" />
              </div>
            </motion.button>

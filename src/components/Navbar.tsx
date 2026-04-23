@@ -21,7 +21,7 @@ export default function Navbar() {
       <motion.button 
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="text-[10px] uppercase tracking-[0.4em] font-mono border-b border-white/20 pb-1 hover:border-white transition-all"
+        className="text-[10px] uppercase tracking-[0.4em] font-mono border-b border-titanium/20 pb-1 hover:border-titanium transition-all"
       >
         Initiate_Contact
       </motion.button>

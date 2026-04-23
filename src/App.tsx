@@ -22,10 +22,10 @@ export default function App() {
   });
 
   return (
-    <div className="bg-black selection:bg-accent selection:text-black min-h-screen relative overflow-hidden">
+    <div className="bg-base min-h-screen relative overflow-hidden">
       {/* Global Progress Bar */}
       <motion.div 
-        className="fixed top-0 left-0 right-0 h-1 bg-accent z-[70] origin-left"
+        className="fixed top-0 left-0 right-0 h-1 bg-titanium z-[70] origin-left"
         style={{ scaleX }}
       />
       

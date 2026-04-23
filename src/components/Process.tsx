@@ -21,7 +21,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-40 bg-base border-t border-white/5">
+    <section id="process" className="py-40 bg-base border-t border-titanium/10">
       <div className="max-w-7xl mx-auto px-12 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-20">
         <div className="space-y-20 lg:sticky lg:top-40 h-fit">
            <div className="space-y-4">
@@ -41,7 +41,7 @@ export default function Process() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: i * 0.2 }}
-              className="group p-12 lg:p-20 interactive-panel border-white/5 flex flex-col gap-10 hover:border-white/20"
+              className="group p-12 lg:p-20 interactive-panel border-titanium/10 flex flex-col gap-10 hover:border-titanium/20"
             >
               <div className="flex justify-between items-start">
                  <span className="font-mono text-[10px] opacity-20">Step_0{i+1}</span>
@@ -53,7 +53,7 @@ export default function Process() {
               </div>
               <div className="pt-10 flex gap-2">
                  {Array.from({ length: 3 }).map((_, idx) => (
-                    <div key={idx} className={`h-1 w-8 rounded-full ${idx === i ? 'bg-white/20' : 'bg-white/5'}`} />
+                    <div key={idx} className={`h-1 w-8 rounded-full ${idx === i ? 'bg-titanium/20' : 'bg-titanium/5'}`} />
                  ))}
               </div>
             </motion.div>
