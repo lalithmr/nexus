@@ -19,7 +19,7 @@ export default function Benefits() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-32 mb-20 md:mb-80 items-center md:items-end text-center lg:text-left">
           <div className="lg:col-span-9 w-full">
              <span className="micro-label">/ Performance_Metric_Audit_026</span>
-             <h2 className="text-5xl md:text-8xl lg:text-[12rem] titanium-gradient leading-[0.75] tracking-[-0.1em] italic">
+             <h2 className="text-4xl md:text-7xl lg:text-[11rem] titanium-gradient leading-[0.75] tracking-[-0.1em] italic pb-4">
                Measureable <br/> 
                <span className="not-italic text-titanium font-sans font-light">Impact.</span>
              </h2>
@@ -61,7 +61,7 @@ export default function Benefits() {
                 <span className="text-[5px] md:text-[6px] font-mono text-bronze opacity-0 group-hover:opacity-100 transition-opacity">[{metric.status}]</span>
               </div>
               <div className="space-y-2 md:space-y-4">
-                <span className="text-4xl md:text-7xl lg:text-[7rem] font-light text-titanium block tracking-[-0.08em] group-hover:italic transition-all duration-1000">
+                <span className="text-3xl md:text-6xl lg:text-[6rem] font-light text-titanium block tracking-[-0.08em] group-hover:italic transition-all duration-1000">
                   {metric.value}
                 </span>
                 <AnimatePresence>

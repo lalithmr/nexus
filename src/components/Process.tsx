@@ -28,7 +28,7 @@ export default function Process() {
           <div className="lg:col-span-4 space-y-12 md:space-y-24 lg:sticky lg:top-40 h-fit text-center lg:text-left">
             <div className="space-y-4 md:space-y-8">
               <span className="micro-label">/ Deployment_Timeline</span>
-              <h2 className="text-6xl md:text-8xl lg:text-9xl titanium-gradient leading-none italic tracking-tighter">
+              <h2 className="text-5xl md:text-8xl lg:text-9xl titanium-gradient leading-none italic tracking-tighter">
                 Impact.
               </h2>
             </div>

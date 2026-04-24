@@ -70,7 +70,7 @@ export default function Services() {
                initial={{ opacity: 0 }}
                whileInView={{ opacity: 1 }}
                transition={{ duration: 1.5 }}
-               className="text-6xl md:text-8xl lg:text-[10rem] titanium-gradient leading-none tracking-tighter italic"
+               className="text-4xl md:text-7xl lg:text-[9rem] titanium-gradient leading-none tracking-tighter italic"
              >
                AI Systems That <br/> Actually Work.
              </motion.h2>
@@ -98,7 +98,7 @@ export default function Services() {
               <div className="flex gap-8 md:gap-16 lg:w-3/5 relative z-10">
                 <span className="font-mono text-[6px] md:text-[7px] tracking-[0.2em] opacity-10 pt-2 md:pt-4">/{service.id}</span>
                 <div className="space-y-6 md:space-y-12">
-                   <h3 className="text-4xl md:text-6xl lg:text-[10rem] font-light titanium-gradient tracking-[-0.08em] group-hover:italic transition-all duration-1000 group-hover:pl-4">
+                   <h3 className="text-3xl md:text-5xl lg:text-[8rem] xl:text-[10rem] font-light titanium-gradient tracking-[-0.08em] group-hover:italic transition-all duration-1000 group-hover:pl-4">
                      {service.title}
                    </h3>
                    <div className="flex flex-wrap gap-2 md:gap-4">

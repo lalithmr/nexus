@@ -23,7 +23,7 @@ export default function CTA() {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 2, ease: [0.19, 1, 0.22, 1] }}
-              className="text-5xl md:text-8xl lg:text-[14rem] italic font-display leading-[0.75] titanium-gradient tracking-tighter"
+              className="text-4xl md:text-8xl lg:text-[14rem] italic font-display leading-[0.75] titanium-gradient tracking-tighter pb-4"
             >
               Ready to <br/>
               <span className="not-italic font-sans font-light text-titanium">Automate?</span>

@@ -94,7 +94,7 @@ export default function Hero() {
                   variants={trackingVariants}
                   initial="hidden"
                   animate="visible"
-                  className="text-[12vw] md:text-[10vw] lg:text-[10rem] titanium-gradient font-display italic leading-[0.85]"
+                  className="text-[14vw] md:text-[10vw] lg:text-[10rem] titanium-gradient font-display italic leading-[0.85]"
                 >
                   Automate
                 </motion.h1>
@@ -105,7 +105,7 @@ export default function Hero() {
                   variants={revealVariants}
                   initial="hidden"
                   animate="visible"
-                  className="text-[12vw] md:text-[10vw] lg:text-[10rem] text-titanium font-sans font-light tracking-[-0.1em] lg:pr-[4vw] leading-[0.85]"
+                  className="text-[10vw] md:text-[9vw] lg:text-[10rem] text-titanium font-sans font-light tracking-[-0.1em] lg:pr-[4vw] leading-[0.85]"
                 >
                   Scale_Smarter.
                 </motion.span>

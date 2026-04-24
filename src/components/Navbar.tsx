@@ -82,7 +82,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="fixed inset-0 bg-base z-40 lg:hidden flex flex-col p-12 justify-center items-start gap-12"
+            className="fixed inset-0 bg-base z-40 lg:hidden flex flex-col p-6 md:p-12 justify-center items-start gap-8 md:gap-12"
           >
             <div className="flex flex-col gap-8">
               <a href="#services" onClick={() => setIsOpen(false)} className="text-4xl font-display italic titanium-gradient">Operational_Fabric</a>
