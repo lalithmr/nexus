@@ -1,67 +1,70 @@
-import { Github, Twitter, Linkedin, Bot, ArrowRight } from "lucide-react";
+import { Twitter, Linkedin, ArrowRight } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="py-24 px-12 lg:px-20 border-t border-titanium/10 bg-base relative z-10 overflow-hidden">
-      <div className="absolute inset-0 noise-overlay opacity-5" />
+    <footer className="py-12 md:py-20 px-6 md:px-12 lg:px-32 border-t border-titanium/[0.03] bg-carbon relative z-10 overflow-hidden">
+      <div className="absolute inset-0 noise-overlay opacity-5 pointer-events-none" />
       
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-20 relative z-10">
-        <div className="md:col-span-1 space-y-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 md:gap-20 relative z-10">
+        <div className="lg:col-span-4 space-y-8 md:space-y-12">
           <div className="flex items-center gap-2">
-            <span className="text-2xl font-display italic titanium-gradient">Nexus.</span>
+            <span className="text-2xl md:text-3xl italic font-display lowercase titanium-gradient">NEXUS</span>
           </div>
-          <p className="text-titanium/20 text-xs uppercase tracking-[0.3em] font-mono leading-loose">
-            Boutique Intelligence Architecture / Engineering the exceptional / 2026 Edition_04.
+          <p className="text-titanium/20 text-[8px] md:text-[9px] uppercase tracking-[0.4em] font-mono leading-loose max-w-xs">
+            Building Efficient, Scalable Businesses with AI / Automation Architecture / v.2026.
           </p>
-          <div className="flex items-center gap-8 text-titanium/20">
-            <Twitter className="w-4 h-4 hover:text-titanium transition-colors cursor-pointer" />
-            <Github className="w-4 h-4 hover:text-titanium transition-colors cursor-pointer" />
-            <Linkedin className="w-4 h-4 hover:text-titanium transition-colors cursor-pointer" />
+          <div className="flex items-center gap-8 md:gap-12 text-titanium/20">
+            <Twitter className="w-4 h-4 hover:text-[#00b3ff] transition-colors cursor-pointer" />
+            <Linkedin className="w-4 h-4 hover:text-[#00b3ff] transition-colors cursor-pointer" />
           </div>
         </div>
 
-        <div className="space-y-6">
-          <h4 className="text-[8px] font-mono tracking-[0.5em] uppercase opacity-20">Systems</h4>
-          <ul className="space-y-4 text-[10px] uppercase tracking-[0.3em] font-mono opacity-40">
-            <li className="hover:opacity-100 transition-opacity cursor-pointer">Protocol_Zenith</li>
-            <li className="hover:opacity-100 transition-opacity cursor-pointer">Archive_Aether</li>
-            <li className="hover:opacity-100 transition-opacity cursor-pointer">Neural_Ops</li>
+        <div className="lg:col-span-2 space-y-8 md:space-y-12">
+          <h4 className="micro-label">/ Services</h4>
+          <ul className="space-y-4 md:space-y-6 text-[9px] md:text-[10px] uppercase tracking-[0.4em] font-mono opacity-30">
+            <li className="hover:opacity-100 hover:text-[#00b3ff] transition-all cursor-pointer">Automation</li>
+            <li className="hover:opacity-100 hover:text-[#00b3ff] transition-all cursor-pointer">AI_Chatbots</li>
+            <li className="hover:opacity-100 hover:text-[#00b3ff] transition-all cursor-pointer">Integrations</li>
           </ul>
         </div>
 
-        <div className="space-y-6">
-          <h4 className="text-[8px] font-mono tracking-[0.5em] uppercase opacity-20">Agency</h4>
-          <ul className="space-y-4 text-[10px] uppercase tracking-[0.3em] font-mono opacity-40">
-            <li className="hover:opacity-100 transition-opacity cursor-pointer">The Studio</li>
-            <li className="hover:opacity-100 transition-opacity cursor-pointer">Methodology</li>
-            <li className="hover:opacity-100 transition-opacity cursor-pointer">Contact</li>
+        <div className="lg:col-span-2 space-y-8 md:space-y-12">
+          <h4 className="micro-label">/ Company</h4>
+          <ul className="space-y-4 md:space-y-6 text-[9px] md:text-[10px] uppercase tracking-[0.4em] font-mono opacity-30">
+            <li className="hover:opacity-100 hover:text-[#00b3ff] transition-all cursor-pointer">Archive</li>
+            <li className="hover:opacity-100 hover:text-[#00b3ff] transition-all cursor-pointer">Methodology</li>
+            <li className="hover:opacity-100 hover:text-[#00b3ff] transition-all cursor-pointer">Strategy_Call</li>
           </ul>
         </div>
 
-        <div className="space-y-10 text-right">
-           <div className="space-y-4">
-              <span className="block text-[8px] font-mono tracking-[0.5em] uppercase opacity-20">Current_Time</span>
-              <span className="block text-sm font-mono opacity-40">SEOUL / 09:24 AM KST</span>
+        <div className="lg:col-span-4 space-y-12 md:space-y-16 lg:text-right flex flex-col items-center lg:items-end">
+           <div className="space-y-4 w-full">
+              <h4 className="micro-label lg:text-right">/ Contact</h4>
+              <div className="flex flex-col items-center lg:items-end gap-2 text-[9px] md:text-[10px] font-mono tracking-[0.2em] opacity-30">
+                <span className="hover:text-titanium transition-colors cursor-pointer">hello@nexus.com</span>
+                <span>Location: India</span>
+              </div>
            </div>
-           <div className="space-y-4">
-              <span className="block text-[8px] font-mono tracking-[0.5em] uppercase opacity-20">Newsletter</span>
+
+           <div className="space-y-6 w-full max-w-sm">
+              <span className="micro-label lg:text-right block">/ Intelligence_Feed</span>
               <div className="group relative">
                  <input 
                     type="text" 
-                    placeholder="ENTER_EMAIL" 
-                    className="w-full bg-transparent border-b border-titanium/10 py-2 text-[10px] font-mono uppercase tracking-widest focus:border-titanium transition-all outline-none text-right"
+                    placeholder="SUBSCRIBE_OPS" 
+                    className="w-full bg-transparent border-b border-white/[0.05] py-4 text-[9px] md:text-[10px] font-mono uppercase tracking-[0.3em] focus:border-[#00b3ff] transition-all outline-none text-center lg:text-right placeholder:opacity-20"
                  />
-                 <ArrowRight className="absolute top-1/2 left-0 -translate-y-1/2 w-3 h-3 opacity-0 group-focus-within:opacity-100 transition-opacity" />
+                 <ArrowRight className="absolute top-1/2 left-0 -translate-y-1/2 w-4 h-4 opacity-0 group-focus-within:opacity-100 text-[#00b3ff] transition-all duration-700 hidden md:block" />
               </div>
            </div>
         </div>
       </div>
       
-      <div className="max-w-7xl mx-auto pt-20 mt-20 border-t border-titanium/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[8px] font-mono tracking-[0.4em] text-titanium/10 uppercase">
-        <p>© 2026 Nexus Engineering Studio. All rights strictly reserved. v.104</p>
-        <div className="flex gap-12">
-          <span className="hover:text-titanium cursor-pointer transition-colors">Privacy_Protocol</span>
-          <span className="hover:text-titanium cursor-pointer transition-colors">Legal_Terms</span>
+      <div className="max-w-7xl mx-auto pt-12 md:pt-40 mt-12 md:mt-40 border-t border-titanium/[0.03] flex flex-col md:flex-row justify-between items-center gap-6 md:gap-10 text-[7px] md:text-[8px] font-mono tracking-[0.5em] text-titanium/10 uppercase">
+        <p>© 2026 NEXUS All rights reserved.</p>
+        <div className="flex flex-wrap justify-center gap-8 md:gap-16">
+          <span className="hover:text-[#00b3ff] cursor-pointer transition-colors">Privacy_Protocol</span>
+          <span className="hover:text-[#00b3ff] cursor-pointer transition-colors">Security_Gateway</span>
         </div>
       </div>
     </footer>

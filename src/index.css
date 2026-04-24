@@ -6,71 +6,114 @@
   --font-display: "Cormorant Garamond", serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  --color-base: #F9F4E2;
-  --color-titanium: #598291;
-  --color-sea: #7CA2A0;
-  --color-rain: #A7C3B1;
-  --color-beryl: #D3E3C0;
-  --color-glimmer: rgba(89, 130, 145, 0.05);
+  --color-base: #05070a; /* Deep Space Black */
+  --color-titanium: #f1f5f9; /* Cold Silver */
+  --color-bronze: #00b3ff; /* Brighter Electric Blue */
+  --color-carbon: #0c0f14; /* Graphite Graphite */
+  --color-glimmer: rgba(0, 179, 255, 0.1);
+  --color-mist-pink: #e0faff;
+  --color-alabaster: #f8fafc;
 
-  --radius-xl: 0.5rem;
-  --radius-2xl: 1rem;
-  --radius-3xl: 2rem;
+  --radius-xl: 0rem; /* Sharp edges for elite Brutalist/Luxury blend */
+  --radius-2xl: 0rem;
+  --radius-3xl: 0rem;
 }
 
 @layer base {
   body {
-    @apply bg-base text-titanium/80 antialiased font-sans selection:bg-titanium selection:text-base transition-colors duration-700;
+    @apply bg-base text-titanium/50 antialiased font-sans selection:bg-bronze/95 selection:text-base transition-colors duration-1000 cursor-none;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display italic font-semibold tracking-tight text-titanium;
+    @apply font-display font-light tracking-[-0.08em] text-titanium leading-[0.85];
   }
 }
 
 @layer components {
   .interactive-panel {
-    @apply bg-sea/5 border border-titanium/10 backdrop-blur-3xl transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)];
+    @apply bg-carbon border border-white/[0.04] backdrop-blur-3xl transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)];
   }
 
   .btn-magnetic {
-    @apply relative px-10 py-5 rounded-full border border-titanium/30 text-titanium font-medium overflow-hidden transition-all duration-500 hover:border-titanium hover:bg-titanium hover:text-base flex items-center justify-center gap-3 shadow-sm hover:shadow-xl hover:shadow-titanium/10;
+    @apply relative px-24 py-12 border border-titanium/10 text-titanium uppercase text-[7px] tracking-[0.8em] font-mono overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] hover:border-bronze/60 hover:text-bronze flex items-center justify-center gap-8;
   }
 
-  .text-reveal {
-    @apply overflow-hidden block;
+  .btn-magnetic > * {
+    @apply relative z-10;
+  }
+
+  .btn-magnetic::before {
+    content: '';
+    @apply absolute inset-0 bg-bronze/10 translate-y-full transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)];
+  }
+
+  .btn-magnetic:hover::before {
+    @apply translate-y-0;
+  }
+
+  .btn-magnetic::after {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-[1px] bg-bronze/80 opacity-0 transition-all duration-700;
+  }
+
+  .btn-magnetic:hover::after {
+    @apply opacity-100 top-full transition-all duration-1000 ease-linear;
+  }
+
+  .micro-label {
+    @apply text-[6px] uppercase tracking-[1em] font-mono opacity-25 mb-10 block;
   }
 
   .noise-overlay {
-    mask-image: radial-gradient(circle, #000 0%, transparent 100%);
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    opacity: 0.08;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  .grid-pattern {
+    background-image: 
+      linear-gradient(to right, rgba(238,226,222,0.01) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(238,226,222,0.01) 1px, transparent 1px);
+    background-size: 11.11vw 11.11vh; /* Golden ratio or specific division */
   }
 }
 
 .titanium-gradient {
-  background: linear-gradient(135deg, #598291 0%, #7CA2A0 50%, #A7C3B1 100%);
+  background: linear-gradient(180deg, #f1f5f9 0%, rgba(241, 245, 249, 0.2) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+.bronze-gradient {
+  background: linear-gradient(135deg, #00b3ff 0%, #05070a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.animate-float {
-  animation: float 10s ease-in-out infinite;
+@keyframes scan-line {
+  0% { transform: translateY(-100%); opacity: 0; }
+  10% { opacity: 0.5; }
+  90% { opacity: 0.5; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+.scan-line {
+  animation: scan-line 10s linear infinite;
 }
 
 .neural-bg {
   background-image: 
-    radial-gradient(circle at 2px 2px, rgba(89, 130, 145, 0.05) 1px, transparent 0);
-  background-size: 40px 40px;
+    radial-gradient(circle at 1px 1px, rgba(238, 226, 222, 0.03) 0.5px, transparent 0);
+  background-size: 4vw 4vw;
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar-track {
@@ -78,5 +121,9 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-titanium/20 rounded-full hover:bg-titanium/40 border-4 border-base transition-all;
+  @apply bg-white/10 hover:bg-bronze transition-all;
+}
+
+.writing-vertical {
+  writing-mode: vertical-rl;
 }

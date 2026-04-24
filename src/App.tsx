@@ -9,9 +9,9 @@ import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Process from "./components/Process";
 import Benefits from "./components/Benefits";
-import Testimonials from "./components/Testimonials";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
+import CustomCursor from "./components/CustomCursor";
 
 export default function App() {
   const { scrollYProgress } = useScroll();
@@ -23,9 +23,12 @@ export default function App() {
 
   return (
     <div className="bg-base min-h-screen relative overflow-hidden">
+      <CustomCursor />
+      <div className="noise-overlay" />
+      
       {/* Global Progress Bar */}
       <motion.div 
-        className="fixed top-0 left-0 right-0 h-1 bg-titanium z-[70] origin-left"
+        className="fixed top-0 left-0 right-0 h-[2px] bg-bronze z-[70] origin-left"
         style={{ scaleX }}
       />
       
@@ -36,7 +39,6 @@ export default function App() {
         <Services />
         <Process />
         <Benefits />
-        <Testimonials />
         <CTA />
       </main>
       
