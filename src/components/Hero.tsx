@@ -33,7 +33,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center md:justify-end px-6 md:px-12 lg:px-24 pb-12 md:pb-24 overflow-hidden bg-base neural-bg grid-pattern">
+    <section className="relative min-h-[100dvh] flex flex-col justify-center md:justify-end px-6 md:px-12 lg:px-24 pb-12 md:pb-24 overflow-hidden bg-base neural-bg grid-pattern">
       {/* Precision Grid Overlay */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03] z-0">
         {Array.from({ length: 12 }).map((_, i) => (
@@ -94,7 +94,7 @@ export default function Hero() {
                   variants={trackingVariants}
                   initial="hidden"
                   animate="visible"
-                  className="text-[14vw] md:text-[10vw] lg:text-[10rem] titanium-gradient font-display italic leading-[0.85]"
+                  className="text-[12vw] md:text-[10vw] lg:text-[10rem] titanium-gradient font-display italic leading-[0.85]"
                 >
                   Automate
                 </motion.h1>
@@ -105,7 +105,7 @@ export default function Hero() {
                   variants={revealVariants}
                   initial="hidden"
                   animate="visible"
-                  className="text-[14vw] md:text-[10vw] lg:text-[10rem] text-titanium font-sans font-light tracking-[-0.1em] lg:pr-[4vw] leading-[0.85]"
+                  className="text-[12vw] md:text-[10vw] lg:text-[10rem] text-titanium font-sans font-light tracking-[-0.1em] lg:pr-[4vw] leading-[0.85]"
                 >
                   Scale_Smarter.
                 </motion.span>

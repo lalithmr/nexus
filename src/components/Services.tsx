@@ -70,7 +70,7 @@ export default function Services() {
                initial={{ opacity: 0 }}
                whileInView={{ opacity: 1 }}
                transition={{ duration: 1.5 }}
-               className="text-[12vw] md:text-[10vw] lg:text-[10rem] titanium-gradient leading-none tracking-tighter italic"
+               className="text-6xl md:text-8xl lg:text-[10rem] titanium-gradient leading-none tracking-tighter italic"
              >
                AI Systems That <br/> Actually Work.
              </motion.h2>

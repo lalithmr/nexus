@@ -12,7 +12,10 @@ export default function Navbar() {
       transition={{ duration: 2.2, ease: [0.19, 1, 0.22, 1] }}
       className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center py-6 px-6 md:px-12 lg:px-24 bg-base/80 backdrop-blur-xl border-b border-titanium/5 lg:bg-transparent lg:backdrop-blur-none lg:border-none"
     >
-      <div className="flex flex-col gap-1 cursor-pointer group relative">
+      <div 
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="flex flex-col gap-1 cursor-pointer group relative"
+      >
         <motion.span 
           whileHover={{ opacity: [1, 0.5, 1], x: [0, 2, -2, 0] }}
           transition={{ duration: 0.2 }}
@@ -87,13 +90,28 @@ export default function Navbar() {
               <a href="#results" onClick={() => setIsOpen(false)} className="text-4xl font-display italic titanium-gradient">Yield_Archive</a>
             </div>
             
-            <div className="mt-12 w-full border-t border-titanium/10 pt-12">
+            <div className="mt-12 w-full border-t border-titanium/10 pt-12 space-y-12">
                <motion.button 
                 whileTap={{ scale: 0.95 }}
-                className="w-full btn-magnetic h-20 text-xl font-mono"
+                className="w-full btn-magnetic h-20 text-lg font-mono"
               >
                 BOOK_CALL
               </motion.button>
+
+              <div className="flex justify-between items-center px-4">
+                <div className="flex gap-8 text-titanium/30">
+                   <div className="w-8 h-8 rounded-full border border-titanium/10 flex items-center justify-center hover:border-bronze hover:text-bronze transition-colors">
+                      <Globe size={14} />
+                   </div>
+                   <div className="w-8 h-8 rounded-full border border-titanium/10 flex items-center justify-center hover:border-bronze hover:text-bronze transition-colors">
+                      <Terminal size={14} />
+                   </div>
+                </div>
+                <div className="flex flex-col items-end gap-1 opacity-20">
+                   <span className="text-[6px] font-mono tracking-[0.4em] uppercase">Security_Status</span>
+                   <span className="text-[6px] font-mono tracking-[0.4em] uppercase text-bronze">Active_Encrypted</span>
+                </div>
+              </div>
             </div>
 
             <div className="absolute bottom-12 left-12">

@@ -62,7 +62,7 @@ export default function Process() {
                    </div>
                    
                    <div className="space-y-6">
-                     <h3 className="text-5xl lg:text-8xl font-light text-titanium group-hover:pl-4 transition-all duration-1000 ease-out italic">
+                     <h3 className="text-4xl md:text-6xl lg:text-8xl font-light text-titanium group-hover:pl-4 transition-all duration-1000 ease-out italic">
                        {step.title}
                      </h3>
                      <p className="max-w-2xl text-lg lg:text-2xl font-light text-titanium/20 group-hover:text-titanium/60 transition-all duration-1000 leading-tight italic">

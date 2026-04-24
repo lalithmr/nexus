@@ -21,7 +21,13 @@
 
 @layer base {
   body {
-    @apply bg-base text-titanium/50 antialiased font-sans selection:bg-bronze/95 selection:text-base transition-colors duration-1000 cursor-none;
+    @apply bg-base text-titanium/50 antialiased font-sans selection:bg-bronze/95 selection:text-base transition-colors duration-1000;
+  }
+  
+  @media (hover: hover) {
+    body {
+      cursor: none;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {

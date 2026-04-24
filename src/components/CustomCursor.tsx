@@ -12,7 +12,11 @@ export default function CustomCursor() {
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
+    const mediaQuery = window.matchMedia("(hover: hover)");
     const handleMouseMove = (e: MouseEvent) => {
+      // If the device doesn't support hover, don't show custom cursor
+      if (!mediaQuery.matches) return;
+      
       mouseX.set(e.clientX - 6);
       mouseY.set(e.clientY - 6);
 
