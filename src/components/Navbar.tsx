@@ -10,7 +10,7 @@ export default function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 2.2, ease: [0.19, 1, 0.22, 1] }}
-      className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center py-6 px-6 md:px-12 lg:px-24 bg-base/80 backdrop-blur-xl border-b border-titanium/5 lg:bg-transparent lg:backdrop-blur-none lg:border-none"
+      className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center py-6 px-6 md:px-12 lg:px-12 xl:px-24 bg-base/80 backdrop-blur-xl border-b border-titanium/5 lg:bg-transparent lg:backdrop-blur-none lg:border-none"
     >
       <div 
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -27,48 +27,46 @@ export default function Navbar() {
       </div>
       
       {/* Tablet/Desktop Nav */}
-      <div className="hidden lg:flex items-start gap-32">
-        <div className="flex flex-col gap-6 text-[6px] uppercase tracking-[1em] font-mono opacity-20 hover:opacity-100 transition-all duration-1000">
-           <span className="text-titanium/40 border-b border-titanium/5 pb-2">/ Index</span>
-           <div className="flex flex-col gap-4">
-              <a href="#services" className="hover:text-bronze transition-colors flex items-center gap-2 group/link">
-                Operational_Fabric
-                <div className="w-0 h-[1px] bg-bronze group-hover/link:w-4 transition-all" />
-              </a>
-              <a href="#process" className="hover:text-bronze transition-colors flex items-center gap-2 group/link">
-                Methodology
-                <div className="w-0 h-[1px] bg-bronze group-hover/link:w-4 transition-all" />
-              </a>
-              <a href="#results" className="hover:text-bronze transition-colors flex items-center gap-2 group/link">
-                Yield_Archive
-                <div className="w-0 h-[1px] bg-bronze group-hover/link:w-4 transition-all" />
-              </a>
-           </div>
-        </div>
+      <div className="hidden lg:flex items-center gap-6 xl:gap-12 text-[10px] uppercase tracking-[0.2em] font-mono opacity-80">
+         <div className="flex items-center gap-4 xl:gap-8">
+            <a href="#services" className="hover:text-bronze transition-colors flex items-center gap-2 group/link">
+              Services
+              <div className="w-0 h-[1px] bg-bronze group-hover/link:w-4 transition-all" />
+            </a>
+            <a href="#process" className="hover:text-bronze transition-colors flex items-center gap-2 group/link">
+              Process
+              <div className="w-0 h-[1px] bg-bronze group-hover/link:w-4 transition-all" />
+            </a>
+            <a href="#results" className="hover:text-bronze transition-colors flex items-center gap-2 group/link">
+              Benefits
+              <div className="w-0 h-[1px] bg-bronze group-hover/link:w-4 transition-all" />
+            </a>
 
-        <div className="flex flex-col gap-6 text-[6px] uppercase tracking-[1em] font-mono opacity-20">
-           <span className="text-titanium/40 border-b border-titanium/5 pb-2">/ Status</span>
-           <div className="flex items-center gap-4">
-              <div className="relative">
-                <div className="w-1.5 h-1.5 rounded-full bg-bronze" />
-                <div className="absolute inset-0 w-1.5 h-1.5 rounded-full bg-bronze animate-ping opacity-40" />
-              </div>
-              <span className="text-titanium">Node_01_Online</span>
-           </div>
-        </div>
+
+         </div>
+
+         <div className="w-[1px] h-4 bg-titanium/20" />
+
+         <div className="flex items-center gap-4">
+            <div className="relative">
+              <div className="w-1.5 h-1.5 rounded-full bg-bronze" />
+              <div className="absolute inset-0 w-1.5 h-1.5 rounded-full bg-bronze animate-ping opacity-40" />
+            </div>
+            <span className="text-titanium">Open to New Clients</span>
+         </div>
       </div>
 
       <motion.button 
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1] }}
-        className="hidden md:flex btn-magnetic h-14 md:h-20 px-8 md:px-24 border-titanium/5"
+        className="hidden md:flex btn-magnetic h-14 md:h-20 px-8 lg:px-10 xl:px-24 border-titanium/5"
       >
         BOOK_CALL
       </motion.button>
 
       {/* Mobile Menu Toggle */}
       <button 
-        className="lg:hidden text-titanium p-2"
+        className="lg:hidden text-titanium p-2 relative z-50"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -85,9 +83,11 @@ export default function Navbar() {
             className="fixed inset-0 bg-base z-40 lg:hidden flex flex-col p-6 md:p-12 justify-center items-start gap-8 md:gap-12"
           >
             <div className="flex flex-col gap-8">
-              <a href="#services" onClick={() => setIsOpen(false)} className="text-4xl font-display italic titanium-gradient">Operational_Fabric</a>
-              <a href="#process" onClick={() => setIsOpen(false)} className="text-4xl font-display italic titanium-gradient">Methodology</a>
-              <a href="#results" onClick={() => setIsOpen(false)} className="text-4xl font-display italic titanium-gradient">Yield_Archive</a>
+              <a href="#services" onClick={() => setIsOpen(false)} className="text-4xl font-display italic titanium-gradient">Services</a>
+              <a href="#process" onClick={() => setIsOpen(false)} className="text-4xl font-display italic titanium-gradient">Process</a>
+              <a href="#results" onClick={() => setIsOpen(false)} className="text-4xl font-display italic titanium-gradient">Benefits</a>
+
+
             </div>
             
             <div className="mt-12 w-full border-t border-titanium/10 pt-12 space-y-12">

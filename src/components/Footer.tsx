@@ -10,10 +10,10 @@ export default function Footer() {
           <div className="flex items-center gap-2">
             <span className="text-2xl md:text-3xl italic font-display lowercase titanium-gradient">NEXUS</span>
           </div>
-          <p className="text-titanium/20 text-[8px] md:text-[9px] uppercase tracking-[0.4em] font-mono leading-loose max-w-xs">
+          <p className="text-titanium/60 text-[8px] md:text-[9px] uppercase tracking-[0.4em] font-mono leading-loose max-w-xs">
             Building Efficient, Scalable Businesses with AI / Automation Architecture / v.2026.
           </p>
-          <div className="flex items-center gap-8 md:gap-12 text-titanium/20">
+          <div className="flex items-center gap-8 md:gap-12 text-titanium/60">
             <Twitter className="w-4 h-4 hover:text-[#00b3ff] transition-colors cursor-pointer" />
             <Linkedin className="w-4 h-4 hover:text-[#00b3ff] transition-colors cursor-pointer" />
           </div>
@@ -60,7 +60,7 @@ export default function Footer() {
         </div>
       </div>
       
-      <div className="max-w-7xl mx-auto pt-12 md:pt-40 mt-12 md:mt-40 border-t border-titanium/[0.03] flex flex-col md:flex-row justify-between items-center gap-6 md:gap-10 text-[7px] md:text-[8px] font-mono tracking-[0.5em] text-titanium/10 uppercase">
+      <div className="max-w-7xl mx-auto pt-12 md:pt-40 mt-12 md:mt-40 border-t border-titanium/[0.03] flex flex-col md:flex-row justify-between items-center gap-6 md:gap-10 text-[7px] md:text-[8px] font-mono tracking-[0.5em] text-titanium/50 uppercase">
         <p>© 2026 NEXUS All rights reserved.</p>
         <div className="flex flex-wrap justify-center gap-8 md:gap-16">
           <span className="hover:text-[#00b3ff] cursor-pointer transition-colors">Privacy_Protocol</span>

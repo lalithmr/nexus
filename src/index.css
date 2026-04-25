@@ -6,22 +6,46 @@
   --font-display: "Cormorant Garamond", serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  --color-base: #05070a; /* Deep Space Black */
-  --color-titanium: #f1f5f9; /* Cold Silver */
-  --color-bronze: #00b3ff; /* Brighter Electric Blue */
-  --color-carbon: #0c0f14; /* Graphite Graphite */
-  --color-glimmer: rgba(0, 179, 255, 0.1);
-  --color-mist-pink: #e0faff;
-  --color-alabaster: #f8fafc;
+  --color-base: var(--theme-base);
+  --color-titanium: var(--theme-titanium);
+  --color-bronze: var(--theme-bronze);
+  --color-carbon: var(--theme-carbon);
+  --color-glimmer: var(--theme-glimmer);
+  --color-mist-pink: var(--theme-mist-pink);
+  --color-alabaster: var(--theme-alabaster);
 
   --radius-xl: 0rem; /* Sharp edges for elite Brutalist/Luxury blend */
   --radius-2xl: 0rem;
   --radius-3xl: 0rem;
 }
 
+:root {
+  --theme-base: #f8fafc;
+  --theme-titanium: #05070a;
+  --theme-bronze: #0055ff;
+  --theme-carbon: #ffffff;
+  --theme-glimmer: rgba(0, 85, 255, 0.1);
+  --theme-mist-pink: #e0f0ff;
+  --theme-alabaster: #0c0f14;
+  --theme-grid: rgba(5, 7, 10, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --theme-base: #05070a;
+    --theme-titanium: #f1f5f9;
+    --theme-bronze: #00b3ff;
+    --theme-carbon: #0c0f14;
+    --theme-glimmer: rgba(0, 179, 255, 0.1);
+    --theme-mist-pink: #e0faff;
+    --theme-alabaster: #f8fafc;
+    --theme-grid: rgba(238, 226, 222, 0.03);
+  }
+}
+
 @layer base {
   body {
-    @apply bg-base text-titanium/50 antialiased font-sans selection:bg-bronze/95 selection:text-base transition-colors duration-1000;
+    @apply bg-base text-titanium/90 antialiased font-sans selection:bg-bronze/95 selection:text-base transition-colors duration-1000;
   }
   
   @media (hover: hover) {
@@ -37,7 +61,7 @@
 
 @layer components {
   .interactive-panel {
-    @apply bg-carbon border border-white/[0.04] backdrop-blur-3xl transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)];
+    @apply bg-carbon border border-titanium/5 backdrop-blur-3xl transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)];
   }
 
   .btn-magnetic {
@@ -83,20 +107,20 @@
 
   .grid-pattern {
     background-image: 
-      linear-gradient(to right, rgba(238,226,222,0.01) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(238,226,222,0.01) 1px, transparent 1px);
+      linear-gradient(to right, var(--theme-grid) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--theme-grid) 1px, transparent 1px);
     background-size: 11.11vw 11.11vh; /* Golden ratio or specific division */
   }
 }
 
 .titanium-gradient {
-  background: linear-gradient(180deg, #f1f5f9 0%, rgba(241, 245, 249, 0.2) 100%);
+  background: linear-gradient(180deg, var(--theme-titanium) 0%, transparent 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .bronze-gradient {
-  background: linear-gradient(135deg, #00b3ff 0%, #05070a 100%);
+  background: linear-gradient(135deg, var(--theme-bronze) 0%, var(--theme-base) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -114,7 +138,7 @@
 
 .neural-bg {
   background-image: 
-    radial-gradient(circle at 1px 1px, rgba(238, 226, 222, 0.03) 0.5px, transparent 0);
+    radial-gradient(circle at 1px 1px, var(--theme-grid) 0.5px, transparent 0);
   background-size: 4vw 4vw;
 }
 
@@ -127,7 +151,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-white/10 hover:bg-bronze transition-all;
+  @apply bg-titanium/10 hover:bg-bronze transition-all;
 }
 
 .writing-vertical {

@@ -31,7 +31,7 @@ export default function CTA() {
         </div>
 
         <div className="flex flex-col items-center gap-12 md:gap-24 w-full">
-           <p className="max-w-3xl text-lg md:text-xl lg:text-4xl font-light text-titanium/30 leading-tight italic tracking-tighter px-4">
+           <p className="max-w-3xl text-lg md:text-xl lg:text-4xl font-light text-titanium/80 leading-tight italic tracking-tighter px-4">
              Let’s identify where AI can save you time and improve performance. No obligation—we’ll walk you through real growth opportunities.
            </p>
            

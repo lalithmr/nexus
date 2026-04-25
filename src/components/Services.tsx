@@ -120,7 +120,7 @@ export default function Services() {
               </div>
 
               <div className="w-full lg:w-1/4 space-y-8 md:space-y-16 lg:text-right relative z-10">
-                 <p className="text-lg md:text-xl lg:text-3xl font-light text-titanium/10 group-hover:text-titanium/60 transition-all duration-1000 italic leading-tight tracking-tighter">
+                 <p className="text-lg md:text-xl lg:text-3xl font-light text-titanium/60 group-hover:text-titanium/100 transition-all duration-1000 italic leading-tight tracking-tighter">
                    {service.description}
                  </p>
                  <div className="flex justify-start lg:justify-end">
@@ -131,7 +131,7 @@ export default function Services() {
                       }}
                       className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center border transition-all duration-1000 bg-transparent"
                     >
-                      <Plus className={`w-3 h-3 md:w-4 md:h-4 transition-colors duration-1000 ${active === service.id ? 'text-[#00b3ff]' : 'text-titanium/10'}`} />
+                      <Plus className={`w-3 h-3 md:w-4 md:h-4 transition-colors duration-1000 ${active === service.id ? 'text-[#00b3ff]' : 'text-titanium/50'}`} />
                     </motion.div>
                  </div>
               </div>

@@ -33,7 +33,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-[100dvh] flex flex-col justify-center md:justify-end px-6 md:px-12 lg:px-24 pb-12 md:pb-24 overflow-hidden bg-base neural-bg grid-pattern">
+    <section className="relative min-h-[100dvh] flex flex-col justify-center pt-32 md:pt-40 px-6 md:px-12 lg:px-24 pb-12 md:pb-24 overflow-hidden bg-base neural-bg grid-pattern">
       {/* Precision Grid Overlay */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03] z-0">
         {Array.from({ length: 12 }).map((_, i) => (
@@ -69,24 +69,9 @@ export default function Hero() {
       </div>
 
       <motion.div style={{ opacity }} className="relative z-30 w-full max-w-[100rem] mx-auto">
-        <div className="flex flex-col lg:flex-row justify-between items-center md:items-end gap-12 md:gap-16 mb-12 md:mb-24 text-center lg:text-left">
-          <div className="w-full lg:max-w-4xl space-y-8 md:space-y-16">
-            <div className="overflow-hidden">
-              <motion.div
-                custom={0.1}
-                variants={revealVariants}
-                initial="hidden"
-                animate="visible"
-                className="flex items-center justify-center lg:justify-start gap-6 text-bronze"
-              >
-                <div className="flex items-center gap-2">
-                  <Terminal className="w-3 h-3" />
-                  <span className="text-[6px] font-mono tracking-[1em] uppercase">Status:_ALIGNED</span>
-                </div>
-                <div className="hidden md:block w-12 h-px bg-titanium/10" />
-                <span className="micro-label mb-0 text-titanium/40 hidden md:block">ARCHIVAL_INDEX_0.245</span>
-              </motion.div>
-            </div>
+        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end gap-12 lg:gap-16 mb-12 md:mb-24 text-center lg:text-left">
+          <div className="w-full lg:flex-1 space-y-8 md:space-y-16">
+
 
             <div className="space-y-4 md:space-y-2">
               <div className="overflow-hidden">
@@ -94,21 +79,26 @@ export default function Hero() {
                   variants={trackingVariants}
                   initial="hidden"
                   animate="visible"
-                  className="text-[14vw] md:text-[10vw] lg:text-[10rem] titanium-gradient font-display italic leading-[0.85]"
+                  className="text-[12vw] md:text-[9vw] lg:text-[7vw] xl:text-[7rem] titanium-gradient font-display italic leading-[0.85] tracking-tight"
                 >
-                  Automate
+                  Automate faster
                 </motion.h1>
               </div>
-              <div className="overflow-hidden flex justify-center lg:justify-end">
-                <motion.span 
+              <div className="overflow-hidden flex justify-center lg:justify-start">
+                <motion.div 
                   custom={0.4}
                   variants={revealVariants}
                   initial="hidden"
                   animate="visible"
-                  className="text-[10vw] md:text-[9vw] lg:text-[10rem] text-titanium font-sans font-light tracking-[-0.1em] lg:pr-[4vw] leading-[0.85]"
+                  className="leading-[0.9] flex items-baseline flex-wrap justify-center lg:justify-start"
                 >
-                  Scale_Smarter.
-                </motion.span>
+                  <span className="text-[12vw] md:text-[9vw] lg:text-[7vw] xl:text-[7rem] titanium-gradient font-display italic tracking-tight mr-4 md:mr-6">
+                    with
+                  </span>
+                  <span className="text-[7vw] md:text-[5.5vw] lg:text-[3.5vw] xl:text-[4.5rem] titanium-gradient font-display italic font-bold uppercase tracking-tight">
+                    Artificial Intelligence
+                  </span>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -118,7 +108,7 @@ export default function Hero() {
                initial={{ opacity: 0, y: 20 }}
                animate={{ opacity: 1, y: 0 }}
                transition={{ duration: 2, delay: 1.2 }}
-               className="text-lg md:text-xl lg:text-3xl font-light text-titanium/30 leading-tight italic max-w-sm"
+               className="text-lg md:text-xl lg:text-xl xl:text-2xl font-light text-titanium/80 leading-tight italic max-w-sm lg:max-w-md"
              >
                We design and implement AI-powered systems that automate workflows, qualify leads, and streamline operations — so your business runs efficiently, 24/7.
              </motion.p>
